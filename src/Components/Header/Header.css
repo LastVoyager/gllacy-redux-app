@@ -1,0 +1,245 @@
+.header {
+    position: relative;
+    min-height: 100%;
+    font: inherit;
+    width: auto;
+    z-index: 4;
+}
+
+.header-container {
+    position: relative;
+    margin: 0px auto;
+    max-width: 1200px;
+    padding-top: 10px;
+}
+
+.main-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 27px 0px 27px;
+    
+}
+
+.main-navigation ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    margin-bottom: 0px;
+}
+.options {
+    display: flex;
+   
+    justify-content: space-between;
+    width: 100%;
+}
+.header-burger {
+    display: none;
+}
+.left-option li {
+    font-size: 16px;
+    line-height: 18px;
+}
+.right-option li {
+    
+}
+.main-navigation .right-option {
+    margin-left: auto;
+    padding-bottom: 8px;
+}
+.main-navigation .left-option {
+    margin-right: auto;
+    padding-left: 14px;
+    padding-bottom: 8px;
+}
+
+
+/* SEARCH */
+
+.right-option .search {
+   
+    cursor: pointer;
+    margin-right: 0px;
+}
+
+.right-option .search-button {
+    position: relative;
+    background-color: #849d8f;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    opacity: 1;
+}
+.search:hover .search-button {
+    background-color: #f8f7f4;
+}
+.search:hover .search-button::after {
+    background-image: url(.././img/svg/loupe.svg);
+}
+.right-option .search-button::after {
+    position: absolute;
+    content: "";
+   
+    background-image: url(.././img/svg/loupe.svg);
+    opacity: 1;
+    width: 17px;
+    height: 17px;
+    right: 8px;
+    top: 8px;
+}
+
+.search-content {
+    display: none;
+    position: absolute;
+    background-color:transparent;
+    width: 341px;
+    height: 92px;
+    margin-left: -308px;
+   
+    z-index: 1;  
+}
+.search-content div {
+    height: 84px;
+    background-color:#f8f7f4;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.5);
+    margin-top: 6px; 
+}
+
+.right-option [type="search"] {
+    background-color: #ffffff;
+    text-align: center;
+
+    outline: none;
+    font-weight: 400;
+    color: #999999;
+    font-size: 14px;
+    line-height: 26px;
+
+    min-width: 311px;
+    min-height: 44px;
+    border-radius: 5px 5px 5px 5px;
+    margin: 20px 15px 20px 15px;
+    
+    border: 1px solid;
+    border-color: #999999;
+}
+
+.search:hover .search-content {
+    display: block;
+}
+
+
+/* ENTER  */
+
+.enter  {
+    position: relative;
+    background-color: #a1b5aa;
+    padding: 7px 14px 7px 35px;
+    margin-left: 15px;
+    border-radius: 25px 25px 25px 25px;
+    cursor: pointer;
+}
+.enter-button{
+    min-width: 14px;
+    min-height: 16px;
+}
+.right-option .enter-button::after {
+    position: absolute;
+    content: "";
+    background-image: url(.././img/svg/entrance.svg);
+    width: 20px;
+    height: 19px;
+    margin-left: -62px;
+}
+.enter:hover .enter-content {
+    display: block;
+}
+.enter:hover  {
+    background-color:#f8f7f4;
+}
+.enter:hover a {
+    color: #000000;
+}
+
+
+/* CART */
+.cart {
+    cursor: pointer;
+    margin-left: 15px;
+}
+.right-option .cart {
+    position: relative;
+    background-color: #a1b5aa;
+    padding: 7px 20px 7px 40px;
+    border-radius: 25px 25px 25px 25px;
+}
+
+.cart-button{
+    min-width: 14px;
+    min-height: 16px;
+}
+
+.cart-button-red{
+    min-width: 14px;
+    min-height: 16px;
+}
+
+.right-option .cart-button::before {
+    position: absolute;
+    content: "";
+    background-image: url(.././img/svg/basket.svg);
+    width: 20px;
+    height: 19px;
+    margin-left: -28px;
+}
+
+.right-option .cart-button-red::before {
+    position: absolute;
+    content: "";
+    background-image: url(.././img/svg/basket-red.svg);
+    width: 20px;
+    height: 19px;
+    margin-left: -28px;
+}
+
+.cart:hover .cart-button::before {
+    position: absolute;
+    content: "";
+    background-image: url(.././img/svg/basket-black.svg);
+    width: 20px;
+    height: 19px;
+    margin-left: -28px;
+}
+
+.cart:hover .cart-content {
+    display: block;
+}
+
+.cart:hover  {
+    background-color:#f8f7f4;
+}
+.cart:hover a {
+    color: #000000;
+}
+
+.phone {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0px 27px 0px 27px;
+    right: 0;
+}
+.phone p {
+    margin-bottom: 7px;
+    margin-top: 0px;
+    font-size: 14px;
+    line-height: 16px;
+}
+.phone a {
+    font-size: 22px;
+    line-height: 24px;
+}

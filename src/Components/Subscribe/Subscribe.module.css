@@ -1,0 +1,100 @@
+input {
+    background-color: #ffffff;
+    
+    outline: none;
+    font-weight: 400;
+    color: #999999;
+    font-size: 18px;
+    line-height: 26px;
+    border-radius: 5px 5px 5px 5px;
+    padding-left: 10px;
+    margin: 0px;
+    border: 1px solid;
+    border-color: #999999;
+}
+.name-user,
+.address-user {
+    width: 60%;
+    min-height: 44px;
+}
+.massage-user {
+   padding-bottom: 44px;
+    width: 100%;
+    min-height: 100px;
+}
+
+section {
+    margin:  20px 0px;
+}
+
+.subscribe-content .button {
+    width: 100px;
+    height: 46px;
+    margin-left: 18px;
+}
+
+
+/*SUBSCRIBE BUTTON*/
+
+.subscribe {
+    margin-top: 20px;
+    text-align: right;
+}
+  
+.subscribe button {
+    font: inherit;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 24px;
+    
+    background-image: linear-gradient(#ef6441, #e74a35); 
+    width: 160px;
+    min-height: 44px;
+
+    border: 0px;
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: 0px 1px 3px 0px #ac1000;
+    cursor: pointer;
+}
+  
+.subscribe button:hover {
+    color: #ffffff;
+    background-image: linear-gradient(#f58569, #ed705e);
+    box-shadow: 0px 1px 3px 0px #ac1000; 
+}
+.subscribe button:active {
+    color: #ffffff;
+    background-image: linear-gradient(#d74632, #e1613e); 
+    box-shadow: 0px -1px 3px 0px #ac1000;
+}
+
+/*CLOSE BUTTON*/
+
+.close-button {
+    display: block;
+    border: 0;
+    background-color: transparent;
+    margin-left: auto;
+    min-width: 34px;
+    min-height: 34px;
+    cursor: pointer;
+}
+.close-button::before,
+.close-button::after {
+  content: "";
+  position: absolute;
+  top: 8%;
+  left: 92%;
+
+  width: 34px;
+  height: 3px;
+ 
+  background-color: #000000;
+}
+.close-button::before {
+  transform: rotate(45deg);
+}
+.close-button::after {
+  transform: rotate(-45deg);
+}
+  

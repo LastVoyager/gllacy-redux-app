@@ -1,0 +1,318 @@
+/* M A I N */
+/* main-proposition */
+.main {
+    position: relative;
+}
+.main-container {
+    margin: 0px auto;
+    max-width: 1200px;
+}
+
+.main-proposition {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    min-height: 534px;
+    margin: 47px 27px 0px 27px;
+}
+.main-container
+.ice-cream-1,
+.ice-cream-2,
+.ice-cream-3 {
+    position: absolute;
+    z-index: 1;
+   
+    width: auto;
+    top:-570px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    
+}
+.ice-cream-1 { visibility: hidden;}
+.ice-cream-2 { visibility: hidden;}
+.ice-cream-3 { visibility: hidden;}
+   
+/* .show-image {
+    visibility: visible;
+} */
+.slider-point-1:checked ~ .ice-cream-1 {   visibility: visible;}
+.slider-point-2:checked ~ .ice-cream-2 {   visibility: visible;}
+.slider-point-3:checked ~ .ice-cream-3 {   visibility: visible;}
+
+
+.main-proposition h1 {
+    display: inline-block;
+    margin-top: 230px;
+    font-size: 60px;
+    line-height: 60px;
+    z-index: 2;
+}
+
+.main-proposition form {
+    z-index: 2;
+}
+.radio-btn {
+    display: flex;
+    position: absolute;
+    justify-content: flex-start;
+    width: 100%;
+    height: 30px;
+    left: 0;
+    margin-left: 0px;
+    margin-bottom: -395px;
+    padding: 0px;
+}
+
+input[type="radio"] {
+    height: 21px; 
+    width: 21px;
+    cursor: pointer;
+    z-index: 3;
+    opacity: 0;
+}
+.radio-btn span {
+    position: absolute;
+    background-color:transparent;
+    border: 2px solid #f8f7f4;
+    border-radius: 50%;
+    height: 21px; 
+    width: 21px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.radio-btn .slider-point-2 {
+    margin-left: 8px;
+}
+.radio-btn .slider-point-3 {
+    margin-left: 8px;
+}
+.slider-point-1 + span {
+    margin-left: 0px;
+}
+.slider-point-2 + span {
+    margin-left: 30px;
+}
+.slider-point-3 + span {
+    margin-left: 60px;
+}
+.slider-point-1:checked + span {
+    background-color: #f8f7f4;
+}
+.slider-point-2:checked + span {
+    background-color: #f8f7f4;
+}
+.slider-point-3:checked + span {
+    background-color: #f8f7f4;
+}
+
+.main-proposition .button {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    
+    font: inherit;
+    color: #ffffff;
+    font-size: 32px;
+    line-height: 44px;
+
+    width: 280px;
+    min-height: 67px;
+    margin-top: 30px;
+}
+.main-proposition .button:hover {
+    color: #ffffff;
+    background-image: linear-gradient(#f58569, #ed705e);
+    box-shadow: 0px 1px 3px 0px #ac1000; 
+}
+.main-proposition .button:active {
+    color: #ffffff;
+    background-image: linear-gradient(#d74632, #e1613e); 
+    box-shadow: 0px -1px 3px 0px #ac1000;
+}
+
+/* proposition */
+.proposition {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 27px 40px 27px;
+    height: auto;
+}
+
+.proposition .left {
+    background-image: url(.././img/image_1.jpg);
+    border-radius: 15px 15px 15px 15px;
+    width: 49%;
+    max-height: 230px;
+    z-index: 2;
+}
+.proposition .right {
+    background-image: url(.././img/image_2.jpg);
+    border-radius: 15px 15px 15px 15px;
+    width: 49%;
+    max-height: 230px;
+    z-index: 2;
+}
+.proposition h2 {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 35px;
+    line-height: 41px;
+}
+.proposition p {
+    margin-top: 18px;
+    margin-left: 20px;
+    margin-right: 10px;
+    font-size: 18px;
+    line-height: 22px;
+}
+.proposition a {
+    margin-bottom: 30px;
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: 10px;
+}
+   
+
+/* our-features */
+
+.our-features {
+    color: #323232;
+    margin: 16px 27px 27px 27px;
+}
+.our-features div {
+    background-image: url(.././img/wafer.jpg);
+    border-radius: 15px 15px 15px 15px;
+    padding: 30px 24px;
+}
+.our-features h3 {
+    font-size: 24px;
+    line-height: 30px;
+}
+.list-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.list-features li {
+    position: relative;
+    margin: 28px 0px 0px 40px;
+    width: 480px;
+}
+.features-1::before {
+    position: absolute;
+    content: "";
+    background-image: url(.././img/svg/ice-cream.svg);
+    width: 49px;
+    height: 49px;
+    left: -56px;
+    top: -10px;
+}
+.features-2::before {
+    position: absolute;
+    content: "";
+    background-image: url(.././img/svg/cow.svg);
+    width: 49px;
+    height: 49px;
+    left: -56px;
+    top: -10px;
+}
+.features-3::before {
+    position: absolute;
+    content: "";
+    background-image: url(.././img/svg/eco.svg);
+    width: 49px;
+    height: 49px;
+    left: -56px;
+    top: -10px;
+}
+.features-4::before {
+    position: absolute;
+    content: "";
+    background-image: url(.././img/svg/thermometer.svg);
+    width: 49px;
+    height: 49px;
+    left: -56px;
+    top: -10px;
+}
+
+/* another */
+
+.another {
+    display: flex;
+    justify-content: space-between;
+    margin: 13px 27px 40px 27px;
+}
+
+.news a {
+    display: block;
+    color: #323232;
+    font-size: 24px;
+    line-height: 30px;
+    margin-left: 20px;
+}
+.news a span {
+    border-bottom: 2px solid #000000;
+    padding-bottom: 0;
+}
+.news {
+    width: 48%;
+    min-height: 220px;
+    color: #323232;
+    background-image: url(.././img/strawberry.jpg);
+    border-radius: 15px 15px 15px 15px;
+}
+.news p {
+    margin: 24px 0px 8px 20px;
+}
+.subscribe {
+    width: 48%;
+    min-height: 220px;
+    color: #5a5a5a;
+    background-image: url(.././img/svg/bg-post.svg);
+    border-radius: 15px 15px 15px 15px;
+}
+.subscribe .subscribe-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #f8f7f4;
+    border-radius: 15px 15px 15px 15px;
+    width: 98%;
+    margin: 5px auto;
+    height: 210px;
+}
+.subscribe .subscribe-container p {
+    padding-left: 18px;
+    padding-right: 18px;
+    font-weight: 400;
+}
+.subscribe-container form .button {
+    max-width: 131px;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+.subscribe-container form {
+    display: flex;
+    justify-content: space-around;
+}
+.subscribe .subscribe-container input {
+    background-color: #ffffff;
+    
+    outline: none;
+    font-weight: 400;
+    color: #999999;
+    font-size: 14px;
+    line-height: 26px;
+
+    width: 368px;
+    min-height: 44px;
+    border-radius: 5px 5px 5px 5px;
+    padding-left: 10px;
+    margin-left: 10px;
+    border: 1px solid;
+    border-color: #999999;
+}

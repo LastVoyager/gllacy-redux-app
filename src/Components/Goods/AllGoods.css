@@ -1,0 +1,122 @@
+/* populars */
+
+.populars {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 27px 40px 27px;
+    height: auto;
+}
+
+.populars .good button {
+    display: none;
+    
+    margin: 15px auto;
+    width: 202px;
+    height: 46px;
+    cursor: pointer;
+}
+
+
+.populars .good:hover button {
+    display: flex;
+} 
+
+.populars .good  button:hover {
+    color: #ffffff;
+    background-image: linear-gradient(#f58569, #ed705e);
+    box-shadow: 0px 1px 3px 0px #ac1000;
+   
+}
+.populars .good button:active {
+    color: #ffffff;
+    background-image: linear-gradient(#d74632, #e1613e); 
+    box-shadow: 0px -1px 3px 0px #ac1000;
+}
+
+.populars .price {
+    position: relative;
+    font-size: 35px;
+    line-height: 41px;
+    padding-top: 210px;
+    z-index: 2;
+}
+.populars .description {
+    position: relative;
+    text-align: center;
+    font-size: 16px;
+    line-height: 21px;
+    margin-top: 30px;
+    z-index: 2;
+}
+.populars .good {
+    position: relative;
+    margin-bottom: 40px;
+    min-height: auto;
+   
+}
+
+.populars .good:active,
+.populars .good:hover {
+    min-width: 290px;
+    min-height: 406px;
+    background-color: #9bafa3;
+    border-radius: 10px;
+    margin-bottom: 0px;
+   
+}
+/*.populars .good:active,
+.populars .good:hover {
+    min-width: 290px;
+    min-height: 406px;
+    background-color: #9bafa3;
+    border-radius: 10px;
+    margin-bottom: 0px;
+    z-index: -2;
+}*/
+.image {
+    position: relative;
+   
+    width: 266px;
+    height: 266px;
+    border-radius: 50%;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+   
+.populars img {
+    position: absolute;
+   
+    width: 266px;
+    height: 266px;
+    border-radius: 50%;
+    margin: 10px auto;
+    cursor: pointer;
+    z-index: 1;
+}
+.hit::before {
+    position: absolute;
+    content: "";
+    background-image: url(.././img/svg/hit.svg);
+    width: 61px;
+    height: 61px;
+    z-index: 2;
+}
+/* .good-1 {
+    background-image: url(.././img/image1.png);
+}
+.good-2 {
+    background-image: url(.././img/image2.png);
+}
+.good-3 {
+    background-image: url(.././img/image3.png);
+}
+.good-4 {
+    background-image: url(.././img/image4.png);
+} */
+.populars .good:hover .description {
+    text-decoration-color: #a9bbb1;
+    text-decoration-line: underline;
+    text-underline-offset: 2px;
+}

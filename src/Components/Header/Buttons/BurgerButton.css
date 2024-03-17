@@ -1,0 +1,71 @@
+ /*burger-strings*/
+ @media (max-width:900px) {
+  .burger-strings {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+  }
+  .burger-strings ::after,
+  .burger-strings ::before {
+    content: "";
+    background-color: #f8f7f4;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+  }
+  .burger-strings ::before{
+    top: 10px;
+  }
+  .burger-strings ::after {
+    bottom: 10px;
+  }
+  .burger-strings span {
+    position: absolute;
+    background-color: #f8f7f4;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    top: 16px;
+    transition: all 0.3s ease 0s;
+  }
+  
+  /*burger-cross*/
+  .burger-cross {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+  }
+  .burger-cross span {
+    position: absolute;
+    background-color: #f8f7f4;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    top: 16px;
+    transition: all 0.3s ease 0s;
+  }
+  .burger-cross span {
+    transform: scale(0);
+  }
+  .burger-cross::after,
+  .burger-cross::before {
+    content: "";
+    background-color: #f8f7f4;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    transition: all 3s ease 0s;
+  }
+  .burger-cross::after {
+    top: 9px;
+    transform: rotate(45deg);
+  }
+  .burger-cross::before{
+    top: 9px;
+    transform: rotate(-45deg);
+  }
+}

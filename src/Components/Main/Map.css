@@ -1,0 +1,71 @@
+/* MAP */
+
+.map {
+  position: relative;
+  overflow:hidden;
+  width: 100%;
+  height: 430px;
+}
+
+.map .mark {
+  position: absolute;
+  top: 22%;
+  left: 47%;
+  width: 80px;
+  height: 140px;
+  z-index: 1;
+}
+
+.map .shadow {
+  position: absolute;
+  background-image: url(.././img/shadow.png);
+  top: 30%;
+  left: 47%;
+  width: 182px;
+  height: 110px;
+}
+
+.address-info {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  font-weight: 400;
+  color: #323232;
+  background-color:  #fefefe; 
+  border-radius: 15px 15px 15px 15px;
+  width: 300px;
+  height: 300px;
+
+  margin-top: 0px;
+  margin-right: 27px;
+  right: 0;
+}
+/*.adress-info::before {
+  position: absolute;
+  content: "";
+  background-image: url(../img/svg/pin.svg);
+  width: 80px;
+  height: 140px;
+  margin-top:-65%;
+  margin-left: -276%;
+}*/
+.adress-info .form-button {
+  width: 253px;
+  height: 47px;
+}
+.adress-info .form-button:hover {
+  color: #ffffff;
+  background-image: linear-gradient(#f58569, #ed705e);
+  box-shadow: 0px 1px 3px 0px #ac1000; 
+}
+.adress-info .form-button:active {
+  color: #ffffff;
+  background-image: linear-gradient(#d74632, #e1613e); 
+  box-shadow: 0px -1px 3px 0px #ac1000;
+}
+.adress-info p {
+  margin-left: -15%;
+}

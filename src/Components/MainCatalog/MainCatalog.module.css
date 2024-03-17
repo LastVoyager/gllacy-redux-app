@@ -1,0 +1,643 @@
+*,
+*:after,
+*:before {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.mainContainer {
+    margin: 0px auto;
+    height: 100%;
+    max-width: 1200px;
+}
+
+.dropbtn-active {
+    display: inline-block;
+    color: #ffffff;
+    background-color: #d07058;
+    padding:  8px 15px 8px 15px;
+    text-decoration-line: none;
+    border-radius: 25px 25px 25px 25px;
+} 
+
+.catalog {
+    color: #000000;
+    font-size: 84px;
+}
+
+/* FILTER section */
+
+.filterContainer {
+    min-height: 218px;
+    width: auto;
+    margin: 30px 27px 10px 27px;
+}
+
+.pageNavigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 224px;
+    max-height: 14px;
+}
+.pageNavigation a {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+
+    text-decoration-color: #9fb3a8;
+    text-decoration-line: underline;
+    text-underline-offset: 1px;
+    cursor: pointer;
+}
+.pageNavigation span {
+    position: relative;
+    width: 4px;
+    height: 4px;
+    border-top: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    
+    transform: rotate(+45deg);
+}
+.pageNavigation span::before {
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-top: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    left: -3px;
+    top: 2px;
+    transform: rotate(0deg);
+}
+.filter h2 {
+    margin-top: 7px;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 41px;
+}
+
+/* ALL FILTERS */
+.sortContainer {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+    margin-top: 36px;
+}
+.upperSortStrip {
+    display: flex;
+    justify-content: space-between;
+    width: 860px;
+    min-height: 60px;
+}
+
+/* SORT */
+
+.sort {
+    width: 190px;
+}
+.sort form {
+    position: relative;
+    margin-top: 6px;
+    background-color: #a9bab0;
+    border-radius:  25px 25px 25px 25px;
+    border: none;
+}
+.triangle {
+    position: absolute;
+   
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 6px 9px 6px 0;
+    border-color: transparent #ffffff transparent transparent;  
+    left: 88%;
+    top:35%;
+    cursor: pointer;
+    transform: rotate(-90deg);
+    z-index: 1; 
+}
+.triangle:active  {
+    transform: rotate(-270deg);
+    top:29%;
+}
+
+.sort select {
+    width: 95%;
+    min-height: 36px;
+    color: #ffffff;
+    background-color:  #a9bab0;
+    border-radius:  25px 25px 25px 25px;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* SORT PRISE */
+.sortPrise {
+    width: 220px;
+    margin-left: 14px;
+}
+
+.priceRangeSlider {
+    width:100%;
+    float:left;
+    padding:10px 20px;
+}
+.rangeValue {
+    
+    margin:0;
+}
+.rangeValue input {
+    width:100%;
+    background:none;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    box-shadow: none;
+    border: none;
+    margin: 0px 0 10px 0;
+}
+.rangeBar {
+	border: none;
+	background: #000;
+	height: 3px;	
+	width: 96%;
+	margin-left: 8px;
+}	
+.ui-slider-range {
+    background:#06b9c0;
+}
+
+.ui-slider-handle {
+    border:none;
+    border-radius:25px;
+    background:#fff;
+    border:2px solid #06b9c0;
+    height:17px;
+    width:17px;
+    top: -0.52em;
+    cursor:pointer;
+}
+.ui-slider-handle + span {
+    background:#06b9c0;
+}
+
+/* SORT FAT */
+
+.sortFat {
+    position: relative;
+    width: 420px;
+    margin-left: 14px;
+}
+.fatMeasure {
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+
+    width: 420px;
+    left: 10px;
+    top: 32px;
+}
+.fatMeasure :nth-child(1) {
+    margin-left: 42px;
+}
+.fatMeasure :nth-child(2) {
+    margin-left: 48px;
+}
+.fatMeasure :nth-child(3) {
+    margin-left: 46px;
+}
+.fatMeasure :nth-child(4) {
+    margin-left: 50px;
+}
+.radioButton {
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    min-height: 36px;
+    left: 0;
+    margin-top: 6px;
+   
+    padding: 0px;
+    background-color: #a9bab0;
+    border-radius:  25px 25px 25px 25px;
+}
+
+input[type="radio"] {
+    height: 25px; 
+    width: 25px;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+}
+.radioButton span {
+    position: absolute;
+    background-image: url(../img/svg/radio-off.svg);
+    border: none;
+    height: 25px; 
+    width: 25px;
+    overflow: hidden;
+    z-index: 1;
+    opacity: 1;
+}
+
+.radioButton .sliderPoint1 {
+    margin-left: 12px;
+}
+.radioButton .sliderPoint2 {
+    margin-left: 44px;
+}
+.radioButton .sliderPoint3 {
+    margin-left: 76px;
+}
+.radioButton .sliderPoint4 {
+    margin-left: 76px;
+}
+
+.sliderPoint1 + span {
+    margin-left: 14px;
+}
+.sliderPoint2 + span {
+    margin-left: 84px;
+}
+.sliderPoint3 + span {
+    margin-left: 185px;
+}
+.sliderPoint4 + span {
+    margin-left: 286px;
+}
+.sliderPoint1:checked + span {
+    background-image: url(../img/svg/radio-on.svg);
+    background-color: transparent;
+}
+.sliderPoint2:checked + span {
+    background-image: url(../img/svg/radio-on.svg);
+    background-color: transparent;
+   
+}
+.sliderPoint3:checked + span {
+    background-image: url(../img/svg/radio-on.svg);
+    background-color: transparent;
+}
+.sliderPoint4:checked + span {
+    background-image: url(../img/svg/radio-on.svg);
+    background-color: transparent;
+}
+
+/* lower-sort-strip */
+
+.lowerSortStrip {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 860px;
+    min-height: 60px;
+}
+.sortFiller {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-top: 6px;
+}
+
+.chboxButton {
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+    width: 700px;
+    min-height: 36px;
+    left: 0;
+    margin-right: 14px;
+    padding: 0px;
+    background-color: #a9bab0;
+    border-radius:  25px 25px 25px 25px;
+}
+input[type="checkbox"] {
+    height: 23px; 
+    width: 23px;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+}
+.chboxButton span {
+    position: absolute;
+    background-image: url(../img/svg/checkbox-off.svg);
+    border: none;
+    height: 23px; 
+    width: 23px;
+    overflow: hidden;
+    z-index: 1;
+    opacity: 1;
+}
+.chboxButton .checkboxPoint1 {
+    margin-left: 14px;
+}
+.chboxButton .checkboxPoint2 {
+    margin-left: 118px;
+}
+.chboxButton .checkboxPoint3 {
+    margin-left: 176px;
+}
+.chboxButton .checkboxPoint4 {
+    margin-left: 88px;
+}
+.chboxButton .checkboxPoint5 {
+    margin-left: 92px;
+}
+
+.checkboxPoint1 + span {
+    margin-left: 14px;
+}
+.checkboxPoint2 + span {
+    margin-left: 154px;
+}
+.checkboxPoint3 + span {
+    margin-left: 354px;
+}
+.checkboxPoint4 + span {
+    margin-left: 466px;
+}
+.checkboxPoint5 + span {
+    margin-left: 580px;
+}
+
+.checkboxPoint1:checked + span {
+    width: 26px;
+    background-image: url(../img/svg/checkbox-on.svg);
+    background-color: transparent;
+}
+.checkboxPoint2:checked + span {
+    width: 26px;
+    background-image: url(../img/svg/checkbox-on.svg);
+    background-color: transparent;
+}
+.checkboxPoint3:checked + span {
+    width: 26px;
+    background-image: url(../img/svg/checkbox-on.svg);
+    background-color: transparent;
+}
+.checkboxPoint4:checked + span {
+    width: 26px;
+    background-image: url(../img/svg/checkbox-on.svg);
+    background-color: transparent;
+}
+.checkboxPoint5:checked + span {
+    width: 26px;
+    background-image: url(../img/svg/checkbox-on.svg);
+    background-color: transparent;
+}
+
+
+.fillerMeasure {
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+
+    width: 700px;
+    left: 10px;
+    top: 10px;
+}
+.fillerMeasure :nth-child(1) {
+    margin-left: 38px;
+}
+.fillerMeasure :nth-child(2) {
+    margin-left: 38px;
+}
+.fillerMeasure :nth-child(3) {
+    margin-left: 50px;
+}
+.fillerMeasure :nth-child(4) {
+    margin-left: 64px;
+}
+.fillerMeasure :nth-child(5) {
+    margin-left: 54px;
+}
+
+
+.sort-filler form:nth-child(2) {height: 100%;}
+.sortFillerButton {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 18px;
+    width: 145px;
+    min-height: 36px;
+    background-color: #a9bab0;
+    border-radius:  25px 25px 25px 25px;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+}
+.sort-filler-button:hover {
+    color: #323232;
+    background-color:  #ffffff;
+}
+.sort-filler-button:active {
+    color: #323232;
+    background-color:  #ffffff;
+    box-shadow: 0px -3px 4px #696969;
+}
+
+
+
+/* CATALOG section   background-color: #f8f7f4;*/
+
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+  
+    justify-content: space-between;
+    height: auto;
+    width: auto;
+    margin: 0px 27px;
+    border-bottom: 1px solid #a9bbb1;
+}
+
+.catalog .good a {
+    display: none;
+    margin: 15px auto;
+    width: 202px;
+    height: 46px;
+}
+/*.catalog .good:hover a {
+    display: flex;
+}*/
+
+.catalog .good  a:hover {
+    color: #ffffff;
+    background-image: linear-gradient(#f58569, #ed705e);
+    box-shadow: 0px 1px 3px 0px #ac1000;
+}
+.catalog  a:active {
+    color: #ffffff;
+    background-image: linear-gradient(#d74632, #e1613e); 
+    box-shadow: 0px -1px 3px 0px #ac1000;
+}
+
+.catalog .price {
+    font-size: 35px;
+    line-height: 41px;
+    padding-top: 210px;
+}
+.catalog .description {
+    text-align: center;
+    font-size: 16px;
+    line-height: 21px;
+    margin-top: 20px;
+}
+.catalog .good {
+  margin-bottom: 40px;
+  min-height: auto;
+}
+
+.catalog .good:active,
+.catalog .good:hover {
+    min-width: 290px;
+    min-height: 330px;
+    background-color: #9bafa3;
+    border-radius: 10px;
+    margin-bottom: 0px;
+    z-index: -2;
+}
+
+.image {
+    position: relative;
+   
+    width: 266px;
+    height: 266px;
+    border-radius: 50%;
+    margin: 10px auto;
+    cursor: pointer;
+    z-index: 1;
+}
+.hit::before {
+    position: absolute;
+    content: "";
+    background-image: url(../img/svg/hit.svg);
+    width: 61px;
+    height: 61px;
+}
+/* .good-1 {
+    background-image: url(../img/cream_1.png);
+}
+.good-2 {
+    background-image: url(../img/cream_2.png);
+}
+.good-3 {
+    background-image: url(../img/cream_3.png);
+}
+.good-4 {
+    background-image: url(../img/cream_4.png);
+} */
+.catalog .good:hover .description {
+    text-decoration-color: #a9bbb1;
+    text-decoration-line: underline;
+    text-underline-offset: 2px;
+}
+
+/* PAGINATION */
+.paginationContainer {
+    text-align: center;
+    width: 190px;
+    height: 26px;
+    margin-left: auto;
+    margin-right: 27px;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    max-width: 190px;
+    max-height: 26px;
+}
+.pageList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    min-width: 120px;
+    max-height: 26px;
+}
+.pageList li {
+    min-width: 20px;
+    min-height: 20px;
+}
+.arrowLeft {
+    width: 10px;
+    height: 10px;
+    border-top: 3px solid #ffffff;
+    border-right: 3px solid #ffffff;
+    cursor: pointer;
+    transform: rotate(-135deg);
+}
+.arrowRight {
+    width: 10px;
+    height: 10px;
+    border-top: 3px solid #ffffff;
+    border-right: 3px solid #ffffff;
+    cursor: pointer;
+    transform: rotate(+45deg);
+}
+.noWay { opacity: 0.5;}
+
+.numberActive {
+    text-align: center;
+    color:#000000;
+    font-size: 16px;
+    line-height: 18px;
+}
+.numberActive {color:#000000;}
+.pageActive {
+    display: block;
+  
+    margin: 0px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.pagination .page:hover {
+    margin: 0px;
+    background-color: rgb(255,255,255, 0.3);
+   
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.page {
+    font-size: 14px;
+    
+}
+
+.pageNumber {
+    font-size: 14px;
+    
+}
