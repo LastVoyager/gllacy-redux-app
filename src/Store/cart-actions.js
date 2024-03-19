@@ -22,7 +22,7 @@ export const fetchCartData = () => {
       const counterGoods = await fetchData();
       dispatch(
         goodsActions.uploadingGoods({
-          goods: counterGoods.goods,
+          goods: counterGoods,
         })
       );
     } catch (error) {
