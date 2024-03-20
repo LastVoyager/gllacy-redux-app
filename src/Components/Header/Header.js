@@ -5,6 +5,7 @@ import CartList from './Cart/CartList';
 import BurgerButton from './Buttons/BurgerButton';
 
 //import { CartContext } from '../../Store/CartProvider';
+import { useSelector } from 'react-redux';
 
 import './Header.css';
 import './Header_drop-down_comp.css';
@@ -34,6 +35,8 @@ function Header (props) {
         classToggle = "options";
     }
            
+    const totalGoodsAtCart = useSelector(state => state.cart.totalQuantity)
+
     return (
         <div className="header" id="header">
             <div className="header-container">
@@ -106,9 +109,9 @@ function Header (props) {
                                     </div>
                                 </div>
                             </li>
-                            <li className="cart">{/* 
-                                <a className={(value.request.length > 0) ? "cart-button-red" : "cart-button"} href='/main'>{value.sameItemsIndex}</a> */}
-                                <a className={"cart-button"} href='/main'>{0}</a>
+                            <li className="cart">
+                                <a className={(totalGoodsAtCart > 0) ? "cart-button-red" : "cart-button"} href="#">{totalGoodsAtCart}</a>
+                                {/* <a className={"cart-button"} href='/main'>{0}</a> */}
                                 <CartList/>
                             </li>
                         </ul>

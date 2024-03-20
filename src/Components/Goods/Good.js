@@ -10,8 +10,10 @@ const Good = (props) => {
                 <img src={`${process.env.REACT_APP_SERVER_URL}/${props.info.image}`} alt={props.info.title}/>
                 <p className="price">{props.info.price} &#36;/kg</p>
                 <p className="description">{props.info.title}</p>
-                <button className="button" onClick={props.click}>Add to cart</button>
-                <Link className="button" to={`/main/${props.id}`}>Show more info</Link>
+                <div className="buttonBox">
+                    <button className="button" onClick={props.click}>Add to cart</button>
+                    <Link className="button" to={`/main/${props.info.id}`}>Show more info</Link>
+                </div>
             </div>
             {props.children}
         </li>

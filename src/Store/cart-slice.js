@@ -5,10 +5,8 @@ const cartSlice = createSlice({
   name: 'goods',
   initialState: {
     goods: [],
-    //goodsAtCart: [],
+    goodsAtCart: [],
     totalQuantity: 0,
-    totalSumPlus: 0,
-    totalSumPlusMinus: 0,
   },
   reducers: {
     uploadingGoods(state, action) {
@@ -17,34 +15,33 @@ const cartSlice = createSlice({
 
     addToCart (state, action) { 
       const newGood = action.payload;
-      const excitingGood = state.goods.findIndex(item => item.id === newGood.id);
+      const excitingGood = state.goodsAtCart.findIndex(item => item.id === newGood.id);
       state.totalQuantity++;
 
       if (excitingGood > -1) {
-        state.goods[excitingGood].amount++;
+        state.goodsAtCart[excitingGood].amount++;
       } else {
-        state.goods.push({...newGood, amount: 1})
+        state.goodsAtCart.push({...newGood, amount: 1})
       }
 
-      state.totalSumPlus = state.goods.reduce(function(prev, current) {
+      state.totalQuantity = state.goodsAtCart.reduce(function(prev, current) {
         return prev + +current.amount
       }, 0);
-
     },
 
     removeFromCart (state, action) {
       const id = action.payload;
-      const excitingGood = state.goods.findIndex (item => item.id === id.id);
+      const excitingGood = state.goodsAtCart.findIndex (item => item.id === id.id);
       state.totalQuantity--;
 
-      if (state.goods[excitingGood].amount >= 2 ) {
+      if (state.goodsAtCart[excitingGood].amount >= 2 ) {
 
-        state.goods[excitingGood].amount--;
+        state.goodsAtCart[excitingGood].amount--;
       } else {
-        state.goods.splice(excitingGood,1);
+        state.goodsAtCart.splice(excitingGood,1);
       }
 
-      state.totalSumPlusMinus = state.goods.reduce((prev, current) => prev + Number(current.amount), 0);
+      state.totalQuantity = state.goodsAtCart.reduce((prev, current) => prev + Number(current.amount), 0);
     },
   },
 });

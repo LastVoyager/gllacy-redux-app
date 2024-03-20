@@ -3,7 +3,7 @@ import CartItem from './CartItem';
 import './CartList.css'
 
 const CartList = () => {
-    const goodsAtCart = useSelector((state) => state.cart.goods);
+    const goodsAtCart = useSelector((state) => state.cart.goodsAtCart);
     /* let totalSum = value.request.reduce((s, { price }) => s + price, 0); */
     
 

@@ -8,32 +8,6 @@
     height: auto;
 }
 
-.populars .good button {
-    display: none;
-    
-    margin: 15px auto;
-    width: 202px;
-    height: 46px;
-    cursor: pointer;
-}
-
-
-.populars .good:hover button {
-    display: flex;
-} 
-
-.populars .good  button:hover {
-    color: #ffffff;
-    background-image: linear-gradient(#f58569, #ed705e);
-    box-shadow: 0px 1px 3px 0px #ac1000;
-   
-}
-.populars .good button:active {
-    color: #ffffff;
-    background-image: linear-gradient(#d74632, #e1613e); 
-    box-shadow: 0px -1px 3px 0px #ac1000;
-}
-
 .populars .price {
     position: relative;
     font-size: 35px;
@@ -59,7 +33,7 @@
 .populars .good:active,
 .populars .good:hover {
     min-width: 290px;
-    min-height: 406px;
+    min-height: 450px;
     background-color: #9bafa3;
     border-radius: 10px;
     margin-bottom: 0px;
@@ -76,7 +50,6 @@
 }*/
 .image {
     position: relative;
-   
     width: 266px;
     height: 266px;
     border-radius: 50%;
@@ -84,10 +57,8 @@
     cursor: pointer;
 }
 
-   
 .populars img {
     position: absolute;
-   
     width: 266px;
     height: 266px;
     border-radius: 50%;
@@ -103,6 +74,48 @@
     height: 61px;
     z-index: 2;
 }
+
+.populars .good:hover .description {
+    text-decoration-color: #a9bbb1;
+    text-decoration-line: underline;
+    text-underline-offset: 2px;
+}
+
+/* button's styles and behavior */
+.buttonBox {
+    display: none;
+} 
+.populars .good:hover .buttonBox {
+    display: flex;
+    flex-direction: column;
+} 
+.populars .good .button {
+    display: flex;
+    margin: 10px auto;
+    width: 202px;
+    height: 46px;
+    cursor: pointer;
+}
+.populars .good .button {
+    display: flex;
+    margin: 10px auto;
+    width: 202px;
+    height: 46px;
+    cursor: pointer;
+}
+
+.populars .good  button:hover {
+    color: #ffffff;
+    background-image: linear-gradient(#f58569, #ed705e);
+    box-shadow: 0px 1px 3px 0px #ac1000;
+   
+}
+.populars .good button:active {
+    color: #ffffff;
+    background-image: linear-gradient(#d74632, #e1613e); 
+    box-shadow: 0px -1px 3px 0px #ac1000;
+}
+
 /* .good-1 {
     background-image: url(.././img/image1.png);
 }
@@ -115,8 +128,3 @@
 .good-4 {
     background-image: url(.././img/image4.png);
 } */
-.populars .good:hover .description {
-    text-decoration-color: #a9bbb1;
-    text-decoration-line: underline;
-    text-underline-offset: 2px;
-}

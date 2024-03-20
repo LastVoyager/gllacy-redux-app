@@ -149,7 +149,7 @@
 .right-option .enter-button::after {
     position: absolute;
     content: "";
-    background-image: url(.././img/svg/entrance.svg);
+    background-image: url(.././img/svg/entrance-white.svg);
     width: 20px;
     height: 19px;
     margin-left: -62px;
@@ -162,6 +162,14 @@
 }
 .enter:hover a {
     color: #000000;
+}
+.enter:hover .enter-button::after {
+    position: absolute;
+    content: "";
+    background-image: url(.././img/svg/entrance-black.svg);
+    width: 20px;
+    height: 19px;
+    margin-left: -62px;
 }
 
 
