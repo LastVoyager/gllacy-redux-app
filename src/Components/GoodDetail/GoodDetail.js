@@ -3,14 +3,17 @@ import { useParams, Route, Link, useRouteMatch } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
 import { goodsActions } from '../../Store/cart-slice';
 
-function QuoteDetail() {
+function GoodDetail() {
   const match = useRouteMatch(); //don't need to manually rewrite our root-path, for nested routes.   
   const params = useParams();
   
   //Redux
   const goods = useSelector(state => state.cart.goods);
   const info = goods.find((info) => info.id === params.goodId);
-  console.log(goods);
+
+  console.log(goods); //result: SHOWS ARRAY
+  console.log(info);  //result: UNDEFINED
+
   const dispatch = useDispatch();
   const addToCart = (info) => {
     dispatch(goodsActions.addToCart(info));
@@ -21,7 +24,7 @@ function QuoteDetail() {
       <Route path={match.path} exact>
         <div className="main-container">
           <section className="main-proposition">
-            <h1></h1>
+            <h1>{goods[0].title}</h1> {/* //result: FIRST OF ALL SHOWING VALID VALUE AFTER PAGE RELOADING it CRASHES */}
             <p></p>
             <button className="button" onClick={addToCart}>Add to cart</button>
              {/*  <Link className="button" to={`/main/${props.info.id}`}>Show more info</Link> */}
@@ -33,4 +36,4 @@ function QuoteDetail() {
   );
 }
 
-export default QuoteDetail;
+export default GoodDetail;
