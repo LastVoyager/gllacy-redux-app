@@ -9,21 +9,24 @@ function QuoteDetail() {
   
   //Redux
   const goods = useSelector(state => state.cart.goods);
-  //const dispatch = useDispatch();
-  
-  /* const addToCart = (info) => {
+  const info = goods.find((info) => info.id === params.goodId);
+  console.log(goods);
+  const dispatch = useDispatch();
+  const addToCart = (info) => {
     dispatch(goodsActions.addToCart(info));
-  }; */
-
-  const quote = goods.find((quote) => quote.id === params.quoteId);
+  };
 
   return (
     <Fragment>
       <Route path={match.path} exact>
-        <div className="centered">
-          <Link className="btn--flat" to={`${match.url}/comments`}>
-            Load Comments
-          </Link>
+        <div className="main-container">
+          <section className="main-proposition">
+            <h1></h1>
+            <p></p>
+            <button className="button" onClick={addToCart}>Add to cart</button>
+             {/*  <Link className="button" to={`/main/${props.info.id}`}>Show more info</Link> */}
+            <Link className="btn--flat" to={`${match.url}/comments`}></Link>
+          </section>
         </div>
       </Route>
     </Fragment>

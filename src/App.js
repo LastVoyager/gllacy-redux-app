@@ -45,7 +45,7 @@ function App() {
             <Route path='/catalog'>
               <MainCatalog/>
             </Route>
-            <Route path='/goods/:goodId'>
+            <Route path='/main/:goodId'>
               <GoodDetail/>
             </Route>
           </Switch>
