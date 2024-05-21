@@ -22,6 +22,7 @@ function App() {
   const hideModalHandler = () => {
     setModalShown(false);
   }; */
+  
   const modalShown = useSelector(state => state.ui.modalShown)
 
   useEffect(()=> {
