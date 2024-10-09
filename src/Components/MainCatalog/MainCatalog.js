@@ -1,8 +1,21 @@
 import { Fragment } from 'react';
 
 import classes from './MainCatalog.module.css';
+import {useSelector, useDispatch} from 'react-redux';
+import { goodsActions } from '../../Store/cart-slice';
+import Good from '../Goods/Good';
+
+
 
 function MainCatalog  () {
+  const goods = useSelector(state => state.cart.goods);
+  const dispatch = useDispatch();
+
+  const addToCart = (info) => {
+    dispatch(goodsActions.addToCart(info));
+  };
+
+
   return (
     <main>
       <div className={classes.mainContainer}>
@@ -86,6 +99,16 @@ function MainCatalog  () {
           </div>
         </section>
         <section className={classes.catalog}>
+          <ul className="populars">
+            {goods.map(info => (
+              <Good
+                click={() => addToCart(info)}
+                key={info.id} 
+                info={info}
+                >
+              </Good>
+            ))}
+          </ul>
           <div className={classes.paginationContainer}>
             <ul className={classes.pagination}>
               <li className={`${classes.arrowLeft} ${classes.noWay}`}></li>

@@ -1,4 +1,4 @@
-.backdrop {
+.backdropOn {
     position: fixed;
     top: 0;
     left: 0;
@@ -7,7 +7,9 @@
     z-index: 20;
     background-color: rgba(0, 0, 0, 0.75);
   }
-  
+.backdropOff {
+    display: none;
+}
 .modal {
     position: fixed;
     top: 20vh;
@@ -18,23 +20,49 @@
     border-radius: 14px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     z-index: 30;
-    animation: slide-down 300ms ease-out forwards;
+    animation: all 0.9s ease-out ;
 }
-  
-@media (max-width: 768px) {
-    .modal {
-        width: auto;
-        left: 35%;
+
+.modalOpen {
+    animation: open 0.9s ease-out forwards;
+}
+.modalClosed {
+    animation: close 0.3s ease-out forwards;
+}
+
+@keyframes open {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%)
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%)
     }
 }
 
-@keyframes slide-down {
-    from {
-        opacity: 0;
-        transform: translateY(-3rem);
-    }
-    to {
+@keyframes close {
+    0% {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0%)
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(20%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100%)
+    }
+}
+
+@media (max-width: 768px) {
+    .modalOpen {
+        width: auto;
+        left: 35%;
     }
 }

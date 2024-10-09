@@ -24,7 +24,7 @@ function App() {
   }; */
   
   const modalShown = useSelector(state => state.ui.modalShown)
-
+  
   useEffect(()=> {
     dispatch(fetchCartData());
   }, [dispatch]);
@@ -34,7 +34,8 @@ function App() {
     //<CartProvider>
     <Fragment>
       <div className='body'>
-        {modalShown && <Subscribe/>}
+        {/* {modalShown && <Subscribe/>} */}
+        <Subscribe/>
         <Header></Header>
           <Switch>
             <Route path='/' exact>
