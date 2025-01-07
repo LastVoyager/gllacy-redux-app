@@ -16,7 +16,7 @@ const ModalOverlay = (props) => {
     console.log(modalShown);
 
     return (
-        <div className={`${classes.modal} ${modalShown ? classes.modalOpen : classes.modalClosed}`}>
+        <div className={`${classes.modal} ${modalShown ? classes.modalOpen : ''}`}>
             <div className={classes.content}>{props.children}</div>
         </div>
     );
@@ -28,10 +28,10 @@ const Modal = (props) => {
     const modalShown = useSelector(state => state.ui.modalShown)
 
     return (
-        <Fragment>
+        <>
             <Backdrop/>
             <ModalOverlay>{props.children}</ModalOverlay>
-        </Fragment>
+        </>
     );
     
 };
