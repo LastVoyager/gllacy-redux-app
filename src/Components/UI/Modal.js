@@ -7,7 +7,11 @@ import classes from './Modal.module.css';
 const Backdrop = (props) => {
     const modalShown = useSelector(state => state.ui.modalShown)
     return (
-        <div className={modalShown ? `${classes.backdropOn}`: `${classes.backdropOff}`}></div>
+        <Transition in={modalShown} timeout={400}>
+            {state => (
+                <div className={state === 'exited' ? `${classes.backdropOff}`: `${classes.backdropOn}`}></div>
+            )}
+        </Transition>
     );
 };
 
@@ -16,26 +20,33 @@ const ModalOverlay = (props) => {
     console.log(modalShown);
 
     return (
-        <div className={`${classes.modal} ${modalShown ? classes.modalOpen : ''}`}>
-            <div className={classes.content}>{props.children}</div>
-        </div>
+        <Transition in={modalShown} timeout={400}>
+
+            { state => (
+                <div className={state === 'exited' ? `${classes.modal}` : `${classes.modal} ${classes.modalOpen}`}>
+                    <p className={`${classes.test}`}>{state}</p>
+                    <div className={classes.content}>{props.children}</div>
+                </div>
+            )}
+        </Transition>
     );
 };
 
-//const modalPortal = document.getElementById('modal');
 
 const Modal = (props) => {
     const modalShown = useSelector(state => state.ui.modalShown)
 
+    //react-trans.-group based animation
     return (
-        <>
+        <Fragment>
             <Backdrop/>
             <ModalOverlay>{props.children}</ModalOverlay>
-        </>
+        </Fragment>
     );
     
 };
 
+//const modalPortal = document.getElementById('modal');
 /* const Modal = (props) => {
     return (
         <Fragment>
@@ -44,6 +55,15 @@ const Modal = (props) => {
         </Fragment>
     );
     
-}; */
+    //css-based animation
+    return (
+        <div className={modalShown ? `${classes.backdropOn}`: `${classes.backdropOff}`}></div>
+    );
+    return (
+        <div className={`${classes.modal} ${modalShown ? classes.modalOpen : ''}`}>
+            <div className={classes.content}>{props.children}</div>
+        </div>
+    );
+};  */
 
 export default Modal;

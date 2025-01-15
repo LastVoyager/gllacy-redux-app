@@ -25,10 +25,16 @@
     transform: translateY(-200%)
 }
 
+.test {
+    color: red;
+}
+
 .modalOpen {
     opacity: 1;
     transform: translateY(0%)
 }
+
+
 
 @media (max-width: 768px) {
     .modalOpen {
